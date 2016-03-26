@@ -1,0 +1,258 @@
+body {
+  font-family: Ubuntu;
+  font-size: 18px;
+  color: #212121; }
+
+.container {
+  width: 940px; }
+
+.stripe {
+  background-size: cover;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 2em; }
+
+.stripe-head {
+  padding-bottom: 4em;
+  padding-top: 33px;
+  background-image: url(/img/head-bg.jpg);
+  background-position: 70% center;
+  text-align: center; }
+  .stripe-head .logo {
+    text-align: left; }
+  .stripe-head address .phone {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FDDD4B;
+    position: relative; }
+    .stripe-head address .phone:before {
+      content: "";
+      display: block;
+      background: transparent url(/img/header-phone.png) left center no-repeat;
+      height: 43px;
+      width: 43px;
+      position: absolute;
+      left: 0;
+      top: -5px; }
+  .stripe-head address .city {
+    font-weight: 200; }
+  .stripe-head h1 {
+    margin-top: 50px;
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 50px; }
+    .stripe-head h1 em {
+      font-style: normal;
+      border-bottom: 8px solid #FEDE4B; }
+  .stripe-head .dreams {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 60px; }
+    .stripe-head .dreams span {
+      font-size: 50px;
+      background: transparent url(/img/header-brush.png) center no-repeat;
+      display: block;
+      margin-top: 1rem; }
+      .stripe-head .dreams span small {
+        font-size: 30px;
+        font-weight: 400; }
+  .stripe-head form input, .stripe-head form button {
+    height: 55px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 30%;
+    margin: 0 1%; }
+  .stripe-head form h3 {
+    color: #fff;
+    margin-bottom: .7em; }
+  .stripe-head form button {
+    font-size: 24px;
+    font-weight: 600; }
+
+.stripe-why-you-here ul {
+  list-style: none; }
+
+.stripe-why-you-here {
+  font-size: 20px; }
+  .stripe-why-you-here li {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    padding-left: 130px;
+    margin-bottom: 30px; }
+    .stripe-why-you-here li span {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100px; }
+    .stripe-why-you-here li:before {
+      content: "";
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      vertical-align: middle;
+      position: absolute;
+      left: 0;
+      border-radius: 100%;
+      background-color: #fede4b;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .stripe-why-you-here li.icon-1:before {
+      background-image: url(/img/why-icons/1.png); }
+    .stripe-why-you-here li.icon-2:before {
+      background-image: url(/img/why-icons/2.png); }
+    .stripe-why-you-here li.icon-3:before {
+      background-image: url(/img/why-icons/3.png); }
+    .stripe-why-you-here li.icon-4:before {
+      background-image: url(/img/why-icons/4.png); }
+    .stripe-why-you-here li.icon-5:before {
+      background-image: url(/img/why-icons/5.png); }
+    .stripe-why-you-here li.icon-6:before {
+      background-image: url(/img/why-icons/6.png); }
+
+.stripe-why-marketing {
+  background-image: url(/img/why-bg.jpg);
+  text-align: center; }
+  .stripe-why-marketing span {
+    display: block;
+    margin-bottom: 2em; }
+  .stripe-why-marketing img {
+    margin-bottom: 2em; }
+  .stripe-why-marketing .diag-label:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color: #F55141; }
+
+.stripe-comparison {
+  font-size: 20px;
+  text-align: center; }
+  .stripe-comparison .users > div {
+    padding-top: 420px;
+    background: transparent url(/img/users1.png) center no-repeat; }
+  .stripe-comparison .users .users-many {
+    background-image: url(/img/users.png);
+    background-position: center top; }
+
+.stripe-want-better {
+  background-image: url(/img/better-bg.png); }
+
+.stripe-want-important {
+  padding-bottom: 4em; }
+  .stripe-want-important .importants div {
+    background: transparent url(/img/important1.png) bottom center no-repeat;
+    height: 230px;
+    width: 48%;
+    margin-right: 4%;
+    padding-top: 3em;
+    background-size: contain; }
+  .stripe-want-important .importants .important1 {
+    background-image: url(/img/important1.png); }
+  .stripe-want-important .importants .important2 {
+    background-image: url(/img/important2.png);
+    margin-right: 0; }
+  .stripe-want-important .importants span {
+    display: block;
+    width: 220px; }
+
+.stripe-questions {
+  background-image: url(/img/questions-bg.jpg);
+  height: 615px; }
+  .stripe-questions h2 {
+    color: #FDDD4B; }
+  .stripe-questions h4 {
+    color: #fff; }
+  .stripe-questions small {
+    color: #BDC3C7; }
+
+.stripe-footer {
+  background-color: #ECF0F1;
+  padding-top: 50px; }
+  .stripe-footer .brand + p {
+    margin-top: .5em;
+    margin-bottom: .5em; }
+  .stripe-footer .social-icons a {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    background-color: #4d7470;
+    border-radius: 100%;
+    line-height: 29px;
+    margin-right: .3em; }
+    .stripe-footer .social-icons a:hover {
+      background-color: #FBD839; }
+  .stripe-footer address {
+    margin-bottom: .5em; }
+  .stripe-footer .contacts .phone {
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: 600; }
+  .stripe-footer .contacts a {
+    display: block;
+    color: #3D615D;
+    padding-left: 32px;
+    background: transparent url(/img/footer-email.png) left center no-repeat;
+    margin-bottom: .5em; }
+    .stripe-footer .contacts a.request-call {
+      background-image: url(/img/footer-phone.png);
+      background-position: 2px; }
+
+.btn-yellow {
+  background-color: #FDDD4B;
+  border-color: transparent; }
+  .btn-yellow:hover {
+    background-color: #EEC502; }
+
+h2 {
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+  padding-top: 1em;
+  margin-bottom: .5em; }
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1em; }
+
+h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 1.5em; }
+
+.form-control {
+  border-width: 3px;
+  border-color: transparent;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35); }
+  .form-control:focus {
+    border-color: #FDDD4B; }
+
+form.vertical {
+  text-align: center; }
+  form.vertical input, form.vertical button, form.vertical small {
+    display: block;
+    width: 390px;
+    margin: 1em auto;
+    height: 55px; }
+  form.vertical button {
+    font-size: 24px;
+    font-weight: 600; }
+  form.vertical small {
+    font-size: 14px;
+    font-weight: 200; }
+    form.vertical small:before {
+      content: "";
+      display: inline-block;
+      background: transparent url(/img/lock.png) center no-repeat;
+      height: 15px;
+      width: 15px;
+      margin-bottom: 4px;
+      vertical-align: bottom;
+      margin-right: 10px; }
