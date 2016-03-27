@@ -55,7 +55,8 @@ body {
       font-size: 50px;
       background: transparent url(/img/header-brush.png) center no-repeat;
       display: block;
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      color: #212121; }
       .stripe-head .dreams span small {
         font-size: 30px;
         font-weight: 400; }
@@ -137,6 +138,82 @@ body {
   .stripe-comparison .users .users-many {
     background-image: url(/img/users.png);
     background-position: center top; }
+
+.stripe-services .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #4C7370;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden; }
+  .stripe-services .list li {
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 290px;
+    cursor: pointer; }
+    .stripe-services .list li:hover, .stripe-services .list li.active {
+      background-color: #FDDD4B;
+      color: #212121; }
+    .stripe-services .list li.nav {
+      width: 50px;
+      font-weight: bold;
+      font-size: 2em;
+      background: transparent url(/img/nav/left.png) center no-repeat;
+      padding: 0 0.8em; }
+      .stripe-services .list li.nav:hover {
+        background-color: #4C7370;
+        color: #FDDD4B; }
+      .stripe-services .list li.nav.left {
+        border-right: 1px solid #3F5B59; }
+        .stripe-services .list li.nav.left:hover {
+          background-image: url(/img/nav/left-active.png); }
+      .stripe-services .list li.nav.right {
+        background-image: url(/img/nav/right.png);
+        border-left: 1px solid #3F5B59; }
+        .stripe-services .list li.nav.right:hover {
+          background-image: url(/img/nav/right-active.png); }
+
+.stripe-services .service {
+  background: #EBEFF1 url(/img/services/1.jpg) top left no-repeat;
+  padding-left: 385px;
+  height: 450px;
+  border: 1px solid rgba(100, 133, 130, 0.5);
+  border-top: 0;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+  box-shadow: inset 0px 5px 5px -2px rgba(0, 0, 0, 0.3); }
+  .stripe-services .service.service1 {
+    background-image: url(/img/services/1.jpg); }
+  .stripe-services .service.service2 {
+    background-image: url(/img/services/2.jpg); }
+  .stripe-services .service.service3 {
+    background-image: url(/img/services/3.jpg); }
+  .stripe-services .service.service4 {
+    background-image: url(/img/services/4.jpg); }
+  .stripe-services .service.service5 {
+    background-image: url(/img/services/5.jpg); }
+  .stripe-services .service.service6 {
+    background-image: url(/img/services/6.jpg); }
+  .stripe-services .service .title {
+    font-size: 24px;
+    text-align: left;
+    padding-top: 2em;
+    padding-bottom: 1em; }
+  .stripe-services .service ul {
+    padding-left: 1em; }
+  .stripe-services .service a {
+    color: #212121;
+    font-weight: 500;
+    font-size: 18px; }
+  .stripe-services .service .content {
+    min-height: 350px; }
+  .stripe-services .service .btn {
+    padding: .5em 2em; }
 
 .stripe-want-better {
   background-image: url(/img/better-bg.png); }
