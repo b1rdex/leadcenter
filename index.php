@@ -1,3 +1,44 @@
+<?php
+
+$sent = false;
+
+function getPostPatameter($name, $default = '') {
+  return isset($_POST[$name]) ? $_POST[$name] : $default;
+}
+
+if (getPostPatameter('submit')) {
+  $titles = [
+    '',
+    'Заявка на сайте: запускаем поток клиентов',
+    'Заявка на сайте: узнайте стоимость наших услуг для Вашей компании',
+    'Заявка на сайте: получите бесплатную консультацию как привлечь новых клиентов прямо сейчас',
+  ];
+
+  $title = isset($titles[getPostPatameter('submit')])
+    ? $titles[getPostPatameter('submit')]
+    : 'Заявка на сайте'
+  ;
+
+  $name = htmlspecialchars(trim(getPostPatameter('name')));
+  $phone = htmlspecialchars(trim(getPostPatameter('phone')));
+  $mail = htmlspecialchars(trim(getPostPatameter('mail')));
+
+  $message = <<<MESSAGE
+Имя отправителя: {$name}
+Phone: {$phone}
+Email: {$mail}
+MESSAGE;
+
+  $from = 'leadcentr.ru <noreply@leadcentr.ru>';
+  $to = 'info@leadcentr.ru';
+
+  if (mail($to, $title, $message, 'From:' . $from)) {
+    $sent = true;
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,8 +48,15 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   <link rel="stylesheet" href="/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <?php if ($sent): ?>
+    <div class="alert alert-success email-sent">
+      <strong>Мы получили ваше письмо</strong>
+      и скоро свяжемся с вами!
+    </div>
+  <?php endif ?>
 
   <div class="stripe stripe-head">
     <div class="container">
@@ -42,11 +90,12 @@
         </div>
       </div>
 
-      <form action="">
+
+	  <form action="" method="post">
         <h3>Готовы к потоку клиентов?</h3>
-        <input type="text" placeholder="Имя" class="form-control">
-        <input type="text" placeholder="Телефон" class="form-control">
-        <button type="submit" class="btn btn-yellow">Запускаем</button>
+        <input type="text" placeholder="Имя" class="form-control" name="name" required>
+        <input type="tel" placeholder="Телефон" class="form-control" name="phone" required>
+        <button type="submit" class="btn btn-yellow" name="submit" value="1">Запускаем</button>
       </form>
     </div>
   </div>
@@ -167,12 +216,12 @@
     <div class="container">
       <h2>Хотите такие результаты и даже лучше?</h2>
 
-      <form action="" class="vertical">
+      <form action="" class="vertical" method="post">
         <h4>Узнайте стоимость наших услуг для Вашей компании</h4>
-        <input type="text" placeholder="Имя" class="form-control">
-        <input type="text" placeholder="Телефон" class="form-control">
-        <input type="text" placeholder="Электронная почта" class="form-control">
-        <button type="submit" class="btn btn-yellow">Получить расчет</button>
+        <input type="text" placeholder="Имя" class="form-control" name="name" required>
+        <input type="tel" placeholder="Телефон" class="form-control" name="phone" required>
+        <input type="email" placeholder="Электронная почта" class="form-control" name="mail" required>
+        <button type="submit" class="btn btn-yellow" name="submit" value="2">Получить расчет</button>
         <small>Ваши данные надежно защищены</small>
       </form>
     </div>
@@ -198,16 +247,16 @@
     </div>
   </div>
 
-  <div class="stripe stripe-questions">
+  <div class="stripe stripe-questions" id="questions">
     <div class="container">
       <h2>У Вас остались вопросы?</h2>
 
-      <form action="" class="vertical">
+      <form action="" class="vertical" method="post">
         <h4>Получите бесплатную консультацию как привлечь новых клиентов прямо сейчас!</h4>
-        <input type="text" placeholder="Имя" class="form-control">
-        <input type="text" placeholder="Телефон" class="form-control">
-        <input type="text" placeholder="Электронная почта" class="form-control">
-        <button type="submit" class="btn btn-yellow">Получить консультацию</button>
+        <input type="text" placeholder="Имя" class="form-control" name="name" required>
+        <input type="tel" placeholder="Телефон" class="form-control" name="phone" required>
+        <input type="email" placeholder="Электронная почта" class="form-control" name="mail" required>
+        <button type="submit" class="btn btn-yellow" name="submit" value="3">Получить консультацию</button>
         <small>Ваши данные надежно защищены</small>
       </form>
     </div>
@@ -232,7 +281,7 @@
           <div class="phone">8 (423) 259-08-08</div>
           <div class="working-time">ПН-ПТ с 9-00 до 19-00</div>
         </address>
-        <a href="" class="request-call">Заказать звонок</a>
+        <a href="#questions" class="request-call">Заказать звонок</a>
         <a href="mailto:info@leadcentr.ru" class="email">info@leadcentr.ru</a>
       </div>
     </div>
@@ -241,5 +290,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75789984-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 </html>
