@@ -73,14 +73,12 @@ body {
     font-size: 24px;
     font-weight: 600; }
 
-.stripe-why-you-here ul {
-  list-style: none; }
-
 .stripe-why-you-here {
   font-size: 20px; }
+  .stripe-why-you-here ul {
+    list-style: none; }
   .stripe-why-you-here li {
     position: relative;
-    width: 400px;
     height: 100px;
     padding-left: 130px;
     margin-bottom: 30px; }
@@ -118,15 +116,17 @@ body {
   text-align: center; }
   .stripe-why-marketing span {
     display: block;
-    margin-bottom: 2em; }
+    min-height: 4.5em; }
   .stripe-why-marketing img {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    max-width: 100%; }
   .stripe-why-marketing .diag-label:before {
     content: "";
     display: inline-block;
     vertical-align: middle;
     width: 20px;
     height: 20px;
+    margin-right: 10px;
     background-color: #F55141; }
 
 .stripe-comparison {
@@ -143,7 +143,6 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #4C7370;
   border-top-left-radius: .3em;
   border-top-right-radius: .3em;
   font-weight: bold;
@@ -155,7 +154,8 @@ body {
     vertical-align: middle;
     text-align: center;
     width: 290px;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #4C7370; }
     .stripe-services .list li:hover, .stripe-services .list li.active {
       background-color: #FDDD4B;
       color: #212121; }
@@ -163,7 +163,7 @@ body {
       width: 50px;
       font-weight: bold;
       font-size: 2em;
-      background: transparent url(/img/nav/left.png) center no-repeat;
+      background: #4C7370 url(/img/nav/left.png) center no-repeat;
       padding: 0 0.8em; }
       .stripe-services .list li.nav:hover {
         background-color: #4C7370;
@@ -238,7 +238,7 @@ body {
 
 .stripe-questions {
   background-image: url(/img/questions-bg.jpg);
-  height: 615px; }
+  min-height: 615px; }
   .stripe-questions h2 {
     color: #FDDD4B; }
   .stripe-questions h4 {
@@ -315,7 +315,7 @@ form.vertical {
   text-align: center; }
   form.vertical input, form.vertical button, form.vertical small {
     display: block;
-    width: 390px;
+    max-width: 390px;
     margin: 1em auto;
     height: 55px; }
   form.vertical button {
@@ -350,3 +350,36 @@ form.vertical {
 @media (min-width: 768px) {
   .container {
     max-width: 940px; } }
+
+@media (max-width: 768px) {
+  .stripe-head {
+    background-position: center; }
+    .stripe-head form input, .stripe-head form button {
+      display: block;
+      width: 100%;
+      max-width: 390px;
+      margin: 1em auto; }
+  .stripe-services .service {
+    background: none !important;
+    padding-left: 1em;
+    height: auto; }
+    .stripe-services .service .content {
+      min-height: auto; }
+    .stripe-services .service .btn {
+      margin-bottom: 1em; } }
+
+@media (max-width: 544px) {
+  .stripe-head .logo {
+    text-align: center; }
+  .stripe-head .phone:before {
+    display: none !important; }
+  .stripe-head h1 {
+    margin-top: 0; }
+  .stripe-want-important .importants div {
+    width: auto;
+    background: none !important;
+    height: auto;
+    padding: .5em 1em;
+    margin: 0; }
+    .stripe-want-important .importants div span {
+      width: auto; } }

@@ -61,11 +61,11 @@ MESSAGE;
   <div class="stripe stripe-head">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 logo">
+        <div class="col-md-8 logo col-sm-5 col-sm-offset-1 col-md-offset-0">
           <a class="brand" href="/"><img src="/img/logo.png" alt=""></a>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-5 col-sm-offset-1 col-md-offset-0">
           <address>
             <div class="phone">8 (423) 259-08-08</div>
             <div class="city">г. Владивосток</div>
@@ -120,27 +120,27 @@ MESSAGE;
     </div>
   </div>
 
-  <div class="stripe stripe-why-marketing">
+  <div class="stripe stripe-why-marketing hidden-xs-down">
     <div class="container">
       <h2>Почему интернет-маркетинг?</h2>
 
       <div class="row diag">
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <span>Реклама 2010 год</span>
           <img src="/img/diag3.png" alt="">
-          <span class="diag-label">
-            интернет-реклама
-          </span>
+
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <span>Реклама 2012-2013 года</span>
           <img src="/img/diag1.png" alt="">
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <span>Реклама сейчас</span>
           <img src="/img/diag2.png" alt="">
         </div>
       </div>
+
+      <span class="diag-label">интернет-реклама</span>
     </div>
   </div>
 
@@ -149,7 +149,7 @@ MESSAGE;
       <h3>Интернет и интернет реклама самые динамично развивающиеся сегменты</h3>
 
       <div class="row users">
-        <div class="col-md-6 users-few">
+        <div class="col-md-6 users-few hidden-sm-down">
           традиционное привлечение клиентов
         </div>
         <div class="col-md-6 users-many">
@@ -164,11 +164,11 @@ MESSAGE;
       <h2>Наши услуги</h2>
 
       <ul class="list">
-        <li class="nav left"> </li>
+        <li class="nav left hidden-sm-down"> </li>
         <li class="active">Создание Landing Page с конверсией от 7 %</li>
         <li>Поддержка сайта</li>
         <li>Поддержка сайта</li>
-        <li class="nav right"> </li>
+        <li class="nav right hidden-sm-down"> </li>
       </ul>
 
       <div class="service service1">
@@ -231,13 +231,13 @@ MESSAGE;
     <div class="container">
       <h2>Важно</h2>
       <div class="row importants">
-        <div class="col-md-6 important1">
+        <div class="col-sm-6 important1">
           <span>
             Из одной сферы работаем только с одной компанией.
             С Вашими конкурентами работать не будем!
           </span>
         </div>
-        <div class="col-md-6 important2">
+        <div class="col-sm-6 important2">
           <span>
             Для хорошего результата у Вас должен быть
             налаженный отдел продаж
@@ -264,7 +264,7 @@ MESSAGE;
 
   <div class="stripe stripe-footer">
     <div class="container">
-      <div class="col-md-9 words">
+      <div class="col-sm-6 col-md-9 words">
         <a class="brand" href="#"><img src="/img/logo.png" alt=""></a>
         <p>© 2016 "Lead Centr" — агентство интернет маркетинга</p>
 
@@ -276,7 +276,7 @@ MESSAGE;
         </div>
       </div>
 
-      <div class="col-md-3 contacts">
+      <div class="col-sm-6 col-md-3 contacts">
         <address>
           <div class="phone">8 (423) 259-08-08</div>
           <div class="working-time">ПН-ПТ с 9-00 до 19-00</div>

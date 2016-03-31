@@ -86,17 +86,11 @@ body
 
 
 .stripe-why-you-here
+  font-size: 20px
   ul
     list-style: none
-
-
-
-
-.stripe-why-you-here
-  font-size: 20px
   li
     position: relative
-    width: 400px
     height: 100px
     padding-left: 130px
     margin-bottom: 30px
@@ -146,10 +140,11 @@ body
 
   span
     display: block
-    margin-bottom: 2em
+    min-height: 4.5em
 
   img
     margin-bottom: 2em
+    max-width: 100%
 
   .diag-label:before
     content: ""
@@ -157,6 +152,7 @@ body
     vertical-align: middle
     width: 20px
     height: 20px
+    margin-right: 10px
     background-color: #F55141
 
 
@@ -180,7 +176,6 @@ body
     list-style: none
     padding: 0
     margin: 0
-    background-color: #4C7370
     border-top-left-radius: .3em
     border-top-right-radius: .3em
     font-weight: bold
@@ -193,6 +188,7 @@ body
       text-align: center
       width: 290px
       cursor: pointer
+      background-color: #4C7370
       &:hover, &.active
         background-color: #FDDD4B
         color: #212121
@@ -200,7 +196,7 @@ body
         width: 50px
         font-weight: bold
         font-size: 2em
-        background: transparent url(/img/nav/left.png) center no-repeat
+        background: #4C7370 url(/img/nav/left.png) center no-repeat
         padding: 0 0.8em
         &:hover
           background-color: #4C7370
@@ -284,7 +280,7 @@ body
 
 .stripe-questions
   background-image: url(/img/questions-bg.jpg)
-  height: 615px
+  min-height: 615px
   h2
     color: #FDDD4B
   h4
@@ -371,7 +367,7 @@ form.vertical
   text-align: center
   input, button, small
     display: block
-    width: 390px
+    max-width: 390px
     margin: 1em auto
     height: 55px
   button
@@ -407,4 +403,38 @@ form.vertical
 
 @media (min-width: 768px)
   .container
-      max-width: 940px
+    max-width: 940px
+
+@media (max-width: 768px)
+  .stripe-head
+    background-position: center
+    form
+      input, button
+        display: block
+        width: 100%
+        max-width: 390px
+        margin: 1em auto
+  .stripe-services .service
+    background: none !important
+    padding-left: 1em
+    height: auto
+    .content
+      min-height: auto
+    .btn
+      margin-bottom: 1em
+@media (max-width: 544px)
+  .stripe-head
+    .logo
+      text-align: center
+    .phone:before
+      display: none !important
+    h1
+      margin-top: 0
+  .stripe-want-important .importants div
+    width: auto
+    background: none !important
+    height: auto
+    padding: .5em 1em
+    margin: 0
+    span
+      width: auto
